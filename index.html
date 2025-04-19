@@ -129,6 +129,10 @@
       margin-top: 20px;
     }
 
+    figure {
+      margin: 0;
+    }
+
     .gallery img {
       width: 100%;
       border-radius: 10px;
@@ -138,6 +142,13 @@
 
     .gallery img:hover {
       transform: scale(1.05);
+    }
+
+    figcaption {
+      text-align: center;
+      font-size: 0.9em;
+      margin-top: 5px;
+      color: #555;
     }
 
     .modal {
@@ -165,36 +176,22 @@
       border-radius: 10px;
     }
 
-    .form-group {
-      margin-bottom: 15px;
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
+    ul li {
+      margin-bottom: 10px;
     }
 
-    button {
-      background: var(--accent);
-      border: none;
-      padding: 10px 20px;
-      color: white;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
+    ul li a {
+      color: var(--primary);
+      text-decoration: none;
     }
 
-    button:hover {
-      transform: scale(1.05);
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      margin-top: 20px;
+    ul li a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -244,7 +241,7 @@
   <div class="accordion">
     <div class="accordion-item">
       <h3>Minggu - Ibadah Umum</h3>
-      <div class="accordion-content">Pukul 09.30 WIB </div>
+      <div class="accordion-content">Pukul 09.30 WIB</div>
     </div>
     <div class="accordion-item">
       <h3>Rabu - Ibadah Doa</h3>
@@ -252,7 +249,11 @@
     </div>
     <div class="accordion-item">
       <h3>Sabtu - Pemuda Remaja</h3>
-      <div class="accordion-content">Pukul 19.15 WIB </div>
+      <div class="accordion-content">Pukul 19.15 WIB</div>
+      </div> 
+      <div class="accordion-item">
+        <h3>Jumat - Ibadah Pelayan</h3>
+        <div class="accordion-content">Pukul 19.00 WIB</div>
     </div>
   </div>
 </section>
@@ -260,29 +261,42 @@
 <section id="galeri" class="reveal">
   <h2>Galeri Kegiatan</h2>
   <div class="gallery">
-    <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957430409134101/IMG-20241122-WA0017.jpg?ex=68044885&is=6802f705&hm=7bf4df1ca6308a20e410fae56a1271136fd7e42a1c86fd66c319ab777d6ab43c&" alt="1" onclick="openModal(this.src)">
-    <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957431008919592/IMG-20241224-WA0128.jpg?ex=68044886&is=6802f706&hm=52cf3cacf93862327d79fbb2c6c2a2b721e8728a418cd2402e5994f44433f90f&" alt="2" onclick="openModal(this.src)">
-    <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957431637803018/IMG-20241224-WA0113.jpg?ex=68044886&is=6802f706&hm=bf1a0483c62ccaed1119f1723c092471cc59c717a7ceca873b8c8339fa787d24&" alt="3" onclick="openModal(this.src)">
-    <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957431281553599/IMG-20241224-WA0133.jpg?ex=68044886&is=6802f706&hm=c678daeff8940c700a20e207f2f7cb967e2c786fddbb44a3c17807b264f96448&" alt="4" onclick="openModal(this.src)">
+    <figure>
+      <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957430409134101/IMG-20241122-WA0017.jpg?ex=68044885&is=6802f705&hm=7bf4df1ca6308a20e410fae56a1271136fd7e42a1c86fd66c319ab777d6ab43c&" alt="1" onclick="openModal(this.src)">
+      <h4>Peresmian Gereja Cmo-90 Tahun 2024</h4>
+    </figure>
+    <figure>
+      <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1362957431008919592/IMG-20241224-WA0128.jpg?ex=68044886&is=6802f706&hm=52cf3cacf93862327d79fbb2c6c2a2b721e8728a418cd2402e5994f44433f90f&" alt="2" onclick="openModal(this.src)">
+      <h4>Seluruh Jemaat pada Ibadah Natal 2024</h4>
+    </figure>
+    <figure>
+      <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1363008187669811431/IMG-20250101-WA0141.jpg?ex=680477cb&is=6803264b&hm=3aa5912ef180f59754515923afb7245bcb37314c780cb280d422e804e93caa78&" alt="3" onclick="openModal(this.src)">
+      <h4>Makan bersama seluruh Jemaat diawal Tahun 2025</h4>
+    </figure>
+    <figure>
+      <img src="https://cdn.discordapp.com/attachments/1009810992575823902/1363011630639612024/IMG_20221214_193150.jpg?ex=68047b00&is=68032980&hm=a7405875843274aa29d05d6e0cc630e7f449e620455893fac78731426efbac0e&" alt="4" onclick="openModal(this.src)">
+      <h4>Seluruh pemuda GPdI Maranata Tahun 2022</h4>
+    </figure>
   </div>
 </section>
 
+<section class="reveal">
+  <h2>Biodata Gembala Sidang</h2>
+  <p><strong>Nama:</strong> Pdt. T.B. Damanik S.th</p>
+  <p><strong>Tempat/Tanggal Lahir:</strong> Medan, 10 Oktober 1975</p>
+  <p><strong>Pendidikan:</strong> STT Bethel Indonesia, Jakarta</p>
+  <p><strong>Pelayanan:</strong> Telah melayani di GPdI sejak tahun 2001 dan menjadi Gembala Sidang di GPdI Maranata Pondok Meja sejak tahun 2015.</p>
+  <p><strong>Visi Pelayanan:</strong> Menjangkau jiwa-jiwa dan membentuk jemaat yang kuat dalam pengajaran dan kasih Kristus.</p>
+</section>
+
 <section id="kontak" class="reveal">
-  <h2>Kontak</h2>
-  <form onsubmit="return validateForm()">
-    <div class="form-group">
-      <input type="text" id="nama" placeholder="Nama Anda" required>
-    </div>
-    <div class="form-group">
-      <input type="email" id="email" placeholder="Email Anda" required>
-    </div>
-    <div class="form-group">
-      <textarea id="pesan" placeholder="Pesan Anda..." rows="4" required></textarea>
-    </div>
-    <button type="submit">Kirim</button>
-  </form>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15929.449325515005!2d111.7344539!3d-2.6901538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x320d21e46f1f1f33%3A0x123456789abcdef!2sPondok%20Meja%2C%20Kumai!5e0!3m2!1sid!2sid!4v1713438797890!5m2!1sid!2sid"
-    allowfullscreen="" loading="lazy"></iframe>
+  <h2>Media Sosial</h2>
+  <p>Ikuti kami dan dapatkan informasi terbaru melalui media sosial berikut:</p>
+  <ul>
+    <li><a href="https://www.facebook.com/profile.php?id=61566529274904" target="_blank">Facebook: GPdI Pondok Meja</a></li>
+    <li><a href="https://instagram.com/gpdipondokmeja" target="_blank">Instagram: @gpdipondokmeja</a></li>
+    <li><a href="https://wa.me/6282372496121" target="_blank">Whatsapp: 0823-7249-6121</a></li>
+  </ul>
 </section>
 
 <footer>
@@ -294,19 +308,16 @@
 </div>
 
 <script>
-  // Dark Mode
   function toggleTheme() {
     document.body.classList.toggle('dark');
   }
 
-  // Accordion
   document.querySelectorAll('.accordion-item').forEach(item => {
     item.addEventListener('click', () => {
       item.classList.toggle('active');
     });
   });
 
-  // Modal Gallery
   function openModal(src) {
     const modal = document.getElementById('imgModal');
     const img = document.getElementById('modalImg');
@@ -318,20 +329,6 @@
     this.classList.remove('show');
   });
 
-  // Validasi form
-  function validateForm() {
-    const nama = document.getElementById("nama").value;
-    const email = document.getElementById("email").value;
-    const pesan = document.getElementById("pesan").value;
-    if (!nama || !email || !pesan) {
-      alert("Harap isi semua kolom!");
-      return false;
-    }
-    alert("Pesan berhasil dikirim!");
-    return true;
-  }
-
-  // Reveal on Scroll
   const reveals = document.querySelectorAll(".reveal");
   window.addEventListener("scroll", () => {
     for (let i = 0; i < reveals.length; i++) {
@@ -346,4 +343,4 @@
 </script>
 
 </body>
-</html>
+  </html>
